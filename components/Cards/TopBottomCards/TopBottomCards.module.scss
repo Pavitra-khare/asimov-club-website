@@ -1,0 +1,133 @@
+@mixin media_md{
+  @media screen and (max-width:700px) {
+    @content;
+  }
+}
+
+@mixin outer_card_color {
+  background: rgb(15, 97, 150);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 97, 150, 0.5) 0%,
+    rgba(9, 15, 121, 0.5) 42%,
+    rgba(64, 57, 145, 0.5) 100%
+  );
+}
+
+@mixin inner_card_color {
+  background: rgb(103, 3, 92);
+  background: linear-gradient(
+    0deg,
+    rgba(103, 3, 92, 0.5) 0%,
+    rgba(107, 9, 121, 0.5) 42%,
+    rgba(185, 0, 153, 0.5) 100%
+  );
+}
+
+
+.top_card__outer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  height: 15vh;
+  width: 70vw;
+  left: 15vw;
+
+  @media only screen and (max-width: 600px){
+    display: none;
+  }
+
+  clip-path: polygon(100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0 0);
+  @include outer_card_color();
+}
+.top_card__inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+  height: 92%;
+  width: 98%;
+
+  clip-path: polygon(100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0 0);
+  @include inner_card_color();
+  .logo{
+    cursor: pointer;
+    
+  }
+}
+/* .top_card__main{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  z-index: 500;
+  height:95%;
+  width: 50%;
+} */
+
+.bottom__card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+  height: 9vh;
+  width: 35vw;
+  bottom: 0;
+  left: 33.5vw;
+
+  @media only screen and (max-width: 600px){
+    display: none;
+  }
+
+  clip-path: polygon(10% 0, 90% 0, 100% 40%, 100% 100%, 0 100%, 0 40%);
+  @include outer_card_color();
+}
+
+.bottom__main {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  height: 92%;
+  width: 97%;
+  bottom: 0;
+  clip-path: polygon(10% 0, 90% 0, 100% 40%, 100% 100%, 0 100%, 0 40%);
+  @include inner_card_color();
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: white;
+    grid-gap: 10px;
+    margin: auto auto auto auto;
+    padding-right: 1.5rem;
+
+    @include media_md(){
+      grid-gap: 7px;
+      margin-right: 1.5rem;
+    }
+
+    li {
+      font-size: 35px;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      @include media_md(){
+        font-size: 25px;
+      }
+
+      &:hover{
+        transform: translate(0px, -4px);
+        color :yellow;
+      }
+    }
+  }
+}
+
+

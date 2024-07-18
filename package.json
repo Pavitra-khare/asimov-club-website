@@ -1,0 +1,28 @@
+{
+  "name": "arcweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "firebase": "^8.7.1",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-firebase-hooks": "^3.0.4",
+    "react-responsive": "^9.0.0-beta.6",
+    "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1"
+  }
+}

@@ -1,0 +1,154 @@
+.pagewraper {
+  background: #151a20 url("/assets/images/aavriti/background.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+
+  .header {
+    height: 100px;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      height: 50px;
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+  }
+
+  .container {
+    padding: 0 7vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 1px;
+    }
+
+    .card_place {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+      width: 40%;
+      padding-top: 5vh;
+      padding-left: 7vw;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-left: 1vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-left: 1vw;
+      }
+
+      .wraper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20.5vw;
+        clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        padding-top: 3px;
+        background: rgb(43, 85, 173);
+        background: linear-gradient(
+          90deg,
+          rgba(43, 85, 173, 1) 0%,
+          rgba(130, 130, 214, 1) 55%,
+          rgba(61, 119, 209, 1) 79%,
+          rgba(0, 129, 255, 1) 94%
+        );
+        @media screen and (max-width: 768px) {
+          width: 51vw;
+        }
+  
+      
+      .card {
+        width: 20vw;
+        clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+        .cover {
+          width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+          width: 50vw;
+        }
+      }
+    }
+      .button_container {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        @media screen and (max-width: 768px) {
+        gap: 6vw;
+        padding: 0 2rem;
+        }
+
+        .button {
+          flex:1;
+          height: 6vh;
+          padding: 1vh 2vw;
+          color: white;
+          text-align: center;
+          text-decoration: none; 
+          font-size: 16px;
+          background-color: #250e80;
+          border: 4px solid rgb(106, 125, 165);
+          box-sizing: border-box;
+          border-radius: 1rem 0px;
+
+          @media screen and (max-width: 768px) {
+            width: 40vw;
+          }
+        }
+      }
+    }
+
+    .card_contain {
+      color: white;
+      width: 70%;
+      // margin: auto;
+      padding: 7vw;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        // padding: 0;
+      }
+
+
+      .heading {
+        font-size: 5rem;
+        text-align: center;
+        
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          font-size: 3rem;
+        margin-top: 2rem;
+        }
+  
+      }
+      .subheading {
+        margin: 1.5rem auto;
+        font-size: 2rem;
+      }
+    }
+  }
+}

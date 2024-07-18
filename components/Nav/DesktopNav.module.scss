@@ -1,0 +1,145 @@
+@mixin media_vsm{
+  @media screen and (min-width:300px) {
+    @content;
+  }
+}
+@mixin media_sm{
+  @media screen and (min-width:600px) {
+    @content;
+  }
+}
+@mixin media_md{
+  @media screen and (min-width:800px) {
+    @content;
+  }
+}
+@mixin media_lg{
+  @media screen and (min-width:1200px) {
+    @content;
+  }
+}
+
+@mixin outer_card_color {
+  background: rgb(15, 97, 150);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 97, 150, 0.5) 0%,
+    rgba(9, 15, 121, 0.5) 42%,
+    rgba(64, 57, 145, 0.5) 100%
+  );
+}
+
+@mixin inner_card_color {
+  background: rgb(103, 3, 92);
+  background: linear-gradient(
+    0deg,
+    rgba(103, 3, 92, 0.5) 0%,
+    rgba(107, 9, 121, 0.5) 42%,
+    rgba(185, 0, 153, 0.5) 100%
+  );
+}
+
+.outer{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    height: 12vh;
+    width: 80vw;
+    left: 10vw;
+
+    clip-path: polygon(100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0 0);
+    @include outer_card_color();
+
+  &_main{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 100;
+    height: 92%;
+    width: 98%;
+    margin-left: 0.7vw;
+  
+    clip-path: polygon(100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0 0);
+    @include inner_card_color();
+  
+  }
+  ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto auto auto;
+    padding-right: 2rem;
+    @include media_vsm(){
+      grid-gap: 10%;
+      flex-direction: column;
+    }
+    @include media_sm(){
+      grid-gap :10%;
+      flex-direction: column;
+      padding-right: 1.5rem;
+    }
+    @include media_md(){
+      grid-gap :20%;
+      padding-right: 2rem;
+      flex-direction: row;
+    }
+    @include media_lg(){
+      grid-gap: 4rem;
+    }
+  }
+
+  li{
+    
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+
+    &:hover{
+      color: yellow;
+      text-decoration: underline;
+    }
+    
+    @include media_vsm(){
+      font-size: 0.6rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    @include media_sm(){
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+    @include media_md(){
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.inner{
+  
+    &_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+
+    &_left{
+        display: flex;
+        height: 100%;
+        width : 35%; 
+    }
+    &_right{
+        display: flex;
+        height: 100%;
+        width : 35%; 
+        
+    }
+    
+}
+
+

@@ -1,0 +1,15 @@
+.wrapper{
+  height: calc(100vh - 50px);
+  margin: 10px auto;
+  position: relative;
+  width: 800px;
+  
+  canvas {
+    background: rgb(17,1,140);
+    background: linear-gradient(0deg, rgba(9,1,71,1) 0%, rgba(8,116,203,1) 35%, rgba(0,212,255,1) 43%, rgba(126,26,43,1) 44%, rgba(43,0,112,1) 100%);
+    // border: 1px dashed whitesmoke;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,67 @@
+@use "sass:math";
+
+$line-space: 60px;
+$border-height: 2px;
+$grid-line-color: #800797;
+$grid-line-color_old: #1fa0d0;
+
+.moving_grid {
+  z-index: -1;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  width: 100%;
+  height: 55%;
+  transform: translateX(-50%);
+  perspective: 1100px;
+  .container {
+    position: relative;
+    width: 100%;
+    height: 300%;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #1d113c;
+    transform-origin: top;
+    transform: rotateX(65deg) translateY(10%);
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 50%);
+
+    .static_lines {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      .vert {
+        display: inline-block;
+        height: 100%;
+        width: $border-height;
+        background-color: $grid-line-color;
+        margin-left: $line-space;
+        box-shadow: 0 0 6px $grid-line-color;
+      }
+    }
+    .moving_lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      .horz {
+        display: inline-block;
+        width: 100%;
+        height: $border-height;
+        margin-bottom: $line-space;
+        background-color: $grid-line-color;
+        box-shadow: 0 0 3px $grid-line-color;
+        animation: lines 2000ms linear infinite;
+      }
+    }
+  }
+}
+@keyframes lines {
+  from {
+    transform: translateY(-#{math.div($line-space, 2) + $border-height});
+  }
+  to {
+    transform: translateY(#{math.div($line-space, 2) + $border-height});
+  }
+}

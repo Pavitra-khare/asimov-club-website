@@ -1,0 +1,112 @@
+.wraper {
+  background: #151a20;
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    background: #151a20 url("/assets/images/aavriti/bg_aavriti.svg") no-repeat center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      height: 100px;
+      width: 100%;
+      // position: absolute;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-bottom: 15vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        height: 50px;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .aavriti_logo {
+        @media screen and (max-width: 768px) {
+          height: 70px;
+        }
+        @media screen and (max-width: 400px) {
+          height: 60px;
+        }
+      }
+
+      .aavriti_edition {
+        @media screen and (max-width: 768px) {
+          height: 25px;
+        }
+      }
+      .aavriti_date {
+        margin-top: 1rem;
+        @media screen and (max-width: 768px) {
+          height: 40px;
+        }
+        @media screen and (max-width: 500px) {
+          height: 30px;
+        }
+        @media screen and (max-width: 300px) {
+          height: 20px;
+        }
+      }
+      .coming_soon {
+        margin-top: 3rem;
+        @media screen and (max-width: 768px) {
+          height: 80px;
+        }
+        margin-top: 3rem;
+        @media screen and (max-width: 500px) {
+          height: 60px;
+        }
+        @media screen and (max-width: 350px) {
+          height: 50px;
+        }
+      }
+    }
+    .scroll {
+      margin-top: 10vh;
+      background: hsl(184deg 71% 34%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6vh;
+      width: 6vh;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .timer {
+      color: white;
+      font-size: 4rem;
+      margin: 1rem;
+
+      @media (max-width: 700px) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.seperator {
+  height: 30vh;
+  transform: translateY(30vh);
+  width: 100vw;
+  background: linear-gradient(#151a20, #ffffff00);
+}
+
+.background {
+  padding-top: 40vh;
+  background: #151a20 url("/assets/images/aavriti/background.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
